@@ -1,38 +1,131 @@
 .App {
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 50px 5vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Card {
+    border: 1px solid black;
+    padding: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.IdCard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.IdCard img {
+    margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.ContentIdCard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.BoxColor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80px;
+}
+
+.BoxColor p:first-child {
+    margin-bottom: 10px;
+}
+
+.ContainerCards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ContainerCards .CreditCard:not(:last-child) {
+    margin-right: 20px;
+}
+
+.CreditCard {
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* height: 150px; */
+}
+
+.CreditCard img {
+    height: 20px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.CreditCard .Number {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.CreditCard .Info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.CreditCard .Info .Expiration {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Rating {
+    font-size: 32px;
+}
+
+.DriverCard {
+    background-color: #425cbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.DriverCard img {
+    --size: 100px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.DriverCard .CardContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.DriverCard .CardContent h3 {
+    font-size: 24px;
+}
+
+.LikeButton {
+    border: none;
+    color: white;
+    padding: 8px;
+}
+
+.PictureMaxence {
+    --size: 200px;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+    object-fit: cover;
 }
